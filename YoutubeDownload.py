@@ -1,10 +1,7 @@
 from pytube import YouTube
 from pytube import Playlist
-#import requests
-#from bs4 import BeautifulSoup
-#import sys
-#import re
 import os
+import time
 
 def onProgress(stream, chunk, remains):
     total = stream.filesize
@@ -22,4 +19,5 @@ for video_url in playlist.video_urls:
     print("-----------------------------------")
     print("Now download " + video_url + " ...")
     YouTube(video_url, on_progress_callback=onProgress).streams.filter(subtype='mp4',resolution="720p")[0].download(pathdir)
+    time.sleep(2)
     print("Download finished!")
