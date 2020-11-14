@@ -1,9 +1,9 @@
 from pytube import YouTube
 from pytube import Playlist
-import requests
-from bs4 import BeautifulSoup
-import sys
-import re
+#import requests
+#from bs4 import BeautifulSoup
+#import sys
+#import re
 import os
 
 def onProgress(stream, chunk, remains):
